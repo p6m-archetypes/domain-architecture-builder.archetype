@@ -12,7 +12,7 @@ context += prompt("Author:", "author_full", #{
     help: "Author and Email",
 });
 
-context += set("organization-name", render("{{ org-name }}-{{ venture-name }}", context), #{
+context += set("organization-name", render("{{ org-name }}-{{ solution-name }}", context), #{
     cases: [
         CasedIdentityCasedValue(PROGRAMMING_CASES),
         FixedKeyCasedValue("organization-title", TitleCase),
@@ -35,7 +35,7 @@ for service in services {
     let archetype = Archetype("service");
     let service_context = #{
       "org-name": context["org-name"],
-      "venture-name": context["venture-name"],
+      "solution-name": context["solution-name"],
       "project-prefix": service,
       "project-suffix": "Service",
       "platform-version": "1.0.0-SNAPSHOT",
