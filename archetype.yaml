@@ -1,0 +1,14 @@
+---
+description: "Domain Architecture Builder"
+authors: ["Jimmie Fulton"]
+languages: ["Java"]
+frameworks: []
+tags: ["Domain", "Architecture", "Builder"]
+
+requires:
+  archetect: 2.0.0-ALPHA.15
+
+components:
+  org-prompts: git@github.com:p6m-dev/org-prompts.archetype.git
+  domain-gateway: git@github.com:p6m-dev/java-spring-boot-graphql-domain-gateway.archetype.git
+  service: git@github.com:p6m-dev/java-spring-boot-grpc-service.archetype.git
