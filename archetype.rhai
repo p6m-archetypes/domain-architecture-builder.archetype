@@ -39,7 +39,6 @@ for service in services {
       "project-prefix": service,
       "project-suffix": "Service",
       "platform-version": "1.0.0-SNAPSHOT",
-      "standard": "v2",
       "persistence": "CockroachDb",
     };
     let results = archetype.render(service_context);
@@ -53,7 +52,6 @@ if switch_enabled("debug-context") {
 
 render(Archetype("domain-gateway"), context + #{
     "platform-version": "1.0.0-SNAPSHOT",
-    "standard": "v2",
 });
 
 context
